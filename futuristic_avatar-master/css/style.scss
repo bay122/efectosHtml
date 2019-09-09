@@ -1,0 +1,107 @@
+* {box-sizing: border-box;}
+
+body {
+    background: linear-gradient(135deg, rgb(12, 171, 207) 0%, rgb(23, 190, 228) 47%, #E5E5BE 100%);
+    background-repeat: none;
+    height: 100vh;
+}
+
+.container {
+    margin: auto;
+}
+
+.container, .stage {
+    width: 1500px;
+    height: 800px;
+}
+
+.zindex {
+    position: relative;
+}
+
+.avatar {
+    width: 250px;
+    height: 200px;
+    background-image: url('../img/_MG_2814.jpg');
+    background-size: cover;
+    background-position: 0 -10px;
+}
+
+.ftav__container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.ftav__avatar {
+    position: absolute;
+    z-index: 800;
+    border-radius: 100%;
+}
+
+.ef {  
+    /* doesn't work as intended in Firefox 
+     * % values are taken relative to the SVG, not the element
+     * which actually seems to be correct */
+    transform-origin: 50% 50%;
+    animation-name: anim;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* EXAMPLES */
+.ef-1 {
+    stroke-width: 8px;
+    stroke: #FF4136;
+    stroke-dasharray: 15%;
+    stroke-dashoffset: 10%;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+}
+
+.ef-2 {
+    stroke-width: 5px;
+    stroke:#85144b;
+    stroke-dasharray: 18%;
+    stroke-dashoffset: 19%;
+    animation-duration: 25s;
+    
+}
+
+.ef-3 {
+    stroke-width: 3px;
+    stroke: #001f3f;
+    stroke-dasharray: 5%;
+    stroke-dashoffset: 10%;
+    animation-duration: 28s;
+    animation-timing-function: linear;
+}
+
+.ef-4 {
+    stroke-width: 15px;
+    stroke: #DDDDDD;
+    stroke-dasharray: 25%;
+    stroke-dashoffset: 26%;
+    animation-duration: 27s;
+    animation-timing-function: linear;
+}
+
+.ef-5 {
+    stroke-width: 6px;
+    stroke: #F012BE;
+    stroke-dasharray: 25%;
+    stroke-dashoffset: 4%;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+}
+
+
+@keyframes anim{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
